@@ -105,6 +105,8 @@ section {
     &:hover {
       background: $main-color;
       color: $snd-bg-color;
+      box-shadow: 0 0 1rem $main-color;
+      transform: scale(1.1);
     }
   }
 }
@@ -123,5 +125,22 @@ section {
   }
   100% {
     transform: translateY(0);
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: $main-color;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem $main-color;
+  font-size: 1.6rem;
+  color: $bg-color;
+  margin: 2px;
+  &:hover {
+    background: $snd-bg-color;
+    box-shadow: 0 0 1rem $snd-bg-color;
+    color: $main-color;
+    border: 0.2rem solid $main-color;
+    transition: 0.5s ease;
   }
 }

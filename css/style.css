@@ -104,6 +104,8 @@ section {
 .social-media a:hover {
   background: #59b2f4;
   color: #262b40;
+  box-shadow: 0 0 1rem #59b2f4;
+  transform: scale(1.1);
 }
 
 .home-img img {
@@ -122,4 +124,21 @@ section {
   100% {
     transform: translateY(0);
   }
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: #59b2f4;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem #59b2f4;
+  font-size: 1.6rem;
+  color: #191f36;
+  margin: 2px;
+}
+.btn:hover {
+  background: #262b40;
+  box-shadow: 0 0 1rem #262b40;
+  color: #59b2f4;
+  border: 0.2rem solid #59b2f4;
+  transition: 0.5s ease;
 }/*# sourceMappingURL=style.css.map */
