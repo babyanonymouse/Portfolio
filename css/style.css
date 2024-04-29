@@ -1,5 +1,6 @@
 /* import nunito font */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -40,14 +41,15 @@ section {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #fff;
-  font-weight: 700;
+  font-weight: 900;
   cursor: default;
+  font-family: "Cinzel Decorative", cursive;
 }
 
 .navbar a {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #fff;
   margin-left: 4rem;
   font-weight: 700;
@@ -112,6 +114,7 @@ section {
   width: 25vw;
   animation: floatImage 4s ease-in-out infinite;
   border-radius: 50%;
+  margin-left: 36px;
 }
 
 @keyframes floatImage {
@@ -134,11 +137,13 @@ section {
   font-size: 1.6rem;
   color: #191f36;
   margin: 2px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  transition: 0.5s ease;
 }
 .btn:hover {
   background: #262b40;
   box-shadow: 0 0 1rem #262b40;
   color: #59b2f4;
   border: 0.2rem solid #59b2f4;
-  transition: 0.5s ease;
 }/*# sourceMappingURL=style.css.map */
