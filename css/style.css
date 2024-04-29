@@ -96,13 +96,20 @@ section {
   background: transparent;
   border: 0.2rem solid #59b2f4;
   border-radius: 50%;
-  color: #59b2f4;
   font-size: 2rem;
+  color: #59b2f4;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+.social-media a:hover {
+  background: #59b2f4;
+  color: #262b40;
 }
 
 .home-img img {
   width: 25vw;
   animation: floatImage 4s ease-in-out infinite;
+  border-radius: 50%;
 }
 
 @keyframes floatImage {
@@ -115,11 +122,4 @@ section {
   100% {
     transform: translateY(0);
   }
-}
-.simple-icons--linktree::after {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232e5ab2' d='m13.736 5.853l4.005-4.117l2.325 2.38l-4.2 4.005h5.908v3.305h-5.937l4.229 4.108l-2.325 2.334l-5.74-5.769l-5.741 5.769l-2.325-2.325l4.229-4.108H2.226V8.121h5.909l-4.2-4.004l2.324-2.381l4.005 4.117V0h3.472zm-3.472 10.306h3.472V24h-3.472z'/%3E%3C/svg%3E");
 }/*# sourceMappingURL=style.css.map */
