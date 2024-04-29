@@ -1,82 +1,68 @@
+<!-- HTML website for my Portfolio -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-
-
-    <!--Box Icons-->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Header Design-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>My Portfolio | Samuel Lwanga</title>
+  </head>
+  <body>
+    <!-- HEADER DESIGN -->
     <header class="header">
-        <a href="" class="logo">Portfolio</a>
+      <a href="#" class="logo">Portfolio</a>
 
-        <nav class="navbar">
-            <a href="#Home" class="active">Home</a>
-            <a href="#About">About</a>
-            <a href="#Services">Services</a>
-            <a href="#Portfolio">Portfolio</a>
-            <a href="#Contact">Contact</a>
-        </nav>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <!-- home section design-->
+    <!-- HOME SECTION DESIGN -->
     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Samuel</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos adipisci ipsa sit similique aut et
-                saepe doloribus aspernatur.</p>
+      <div class="home-content">
+        <h3>Hi, Myself</h3>
+        <h1>Samuel Lwanga</h1>
+        <h3>And I'm a <span>Web Developer</span></h3>
+        <p>
+          I'm a professional web developer with long time experience in this
+          field. I have developed many websites and web applications for my
+          clients. I'm expert in HTML, CSS, JavaScript, PHP, and MySQL.
+        </p>
 
-            <div class="social-media">
-                <a href="facebook.com/Lilboss01" class="bx bxl-facebook"></a>
-                <a href="twitter.com/BabyLilboss" class="bx bxl-twitter"></a>
-                <a href="instagram.com/lilboss.baby" class="bx bxl-instagram-alt"></a>
-                <a href="wa.me/254753670115" class="bx bxl-whatsapp" alt="whatsapp"></a>
-            </div>
-
-            <a href="#" class="btn">View CV</a>
+        <div class="social-media">
+          <a href="https://www.facebook.com/Lilboss01/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="twitter.com/BabyLilboss"><i class="fab fa-twitter"></i></a>
+          <a href="instagram.com/lilboss.baby"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://linkedin.com/in/lwangasamuel"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <span class="simple-icons--linktree"></span>
         </div>
-
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
-                    <i class="bx bx-code-alt"></i>
-                    <h3>Web Developer</h3>
-                </div>
-                <div class="profession" style="--i:1;">
-                    <i class="bx bx-camera"></i>
-                    <h3>Photographer</h3>
-                </div>
-                <div class="profession" style="--i:2;">
-                    <i class="bx bx-palette"></i>
-                    <h3>Web Designer</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class="bx bx-video-recording"></i>
-                    <h3>Videographer</h3>
-                </div>
-
-                <div class="circle"></div>
-            </div>
-        </div>
-
+        <a href="docs/Samuel Lwanga CV.pdf" class="btn">Download CV</a>
+      </div>
+       
+      <!-- avatar profile image-->
+      <div class="home-img">
+        <img src="images/profiledp.png" alt="" />
+      </div>
     </section>
 
-    <!-- Custom JS-->
-    <script src="script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
