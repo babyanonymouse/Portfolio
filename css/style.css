@@ -288,10 +288,6 @@ span {
   margin-bottom: 3rem;
 }
 
-textarea {
-  resize: none;
-}
-
 .contact form {
   max-width: 70rem;
   margin: 1rem auto;
@@ -310,12 +306,18 @@ textarea {
   color: #262b40;
   border-radius: 0.8rem;
   margin: 0.7rem 0;
+  width: 49%;
 }
 .contact form textarea {
+  resize: none;
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
   color: #262b40;
   border-radius: 0.8rem;
   margin: 0.7rem 0;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
