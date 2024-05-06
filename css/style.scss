@@ -144,9 +144,33 @@ section {
   letter-spacing: 0.1rem;
   transition: 0.5s ease;
   &:hover {
-    background: $snd-bg-color;
-    box-shadow: 0 0 1rem $snd-bg-color;
-    color: $main-color;
-    border: 0.2rem solid $main-color;
+    box-shadow: none;
+  }
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: $snd-bg-color;
+}
+.about-img img {
+  width: 35vw;
+}
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+.about-content {
+  h2 {
+    text-align: left;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+  p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
   }
 }

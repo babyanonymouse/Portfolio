@@ -142,8 +142,34 @@ section {
   transition: 0.5s ease;
 }
 .btn:hover {
+  box-shadow: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   background: #262b40;
-  box-shadow: 0 0 1rem #262b40;
-  color: #59b2f4;
-  border: 0.2rem solid #59b2f4;
+}
+
+.about-img img {
+  width: 35vw;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+.about-content h3 {
+  font-size: 2.6rem;
+}
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
 }/*# sourceMappingURL=style.css.map */
