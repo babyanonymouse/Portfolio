@@ -423,7 +423,15 @@ span {
     margin-top: 8rem;
   }
   .about-img img {
-    width: 100vw;
+    width: 80vw;
     margin-top: 4rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .contact form .input-box input {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
