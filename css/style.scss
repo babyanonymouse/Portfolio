@@ -421,3 +421,17 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width:617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  .home-img img {
+    width: 80vw;
+    margin-top: 8rem;
+  }
+  .about-img img {
+    width: 100vw;
+    margin-top: 4rem;
+  }
+}
