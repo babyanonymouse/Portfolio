@@ -1,40 +1,59 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Get all the links in the navbar
-  const navbarLinks = document.querySelectorAll(".navbar a");
+/*=============== Toggle Navbar Icon ===============*/
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
-  // Add click event to each link
-  navbarLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("fa-xmark");
+  navbar.classList.toggle("active");
+};
 
-      // Get the href attribute value
-      const targetId = link.getAttribute("href").substring(1);
+/*=============== Scroll Section Active Link ===============*/
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
 
-      // Get the target element by id
-      const targetElement = document.getElementById(targetId);
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
 
-      // Scroll to the target element
-      targetElement.scrollIntoView({
-        behavior: "smooth",
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach.apply((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
       });
-
-      // Remove 'active' class from all links
-      navbarLinks.forEach((link) => link.classList.remove("active"));
-
-      // Add 'active' class to the clicked link
-      link.classList.add("active");
-    });
+    }
   });
+  /* ==================== Sticky Navbar ==================== */
+  let header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 100);
+  /* ================= Remove toggle icon and navbar ================= */
+  menuIcon.classList.remove("fa-xmark");
+  navbar.classList.remove("active");
+};
 
-  // Handle scroll to top button click
-  const scrollTopBtn = document.querySelector(".footer-iconTop a");
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      document.getElementById("home").scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  }
+/*=============== Scroll Reveal ===============*/
+ScrollReveal({
+  distance: "80px",
+  duration: 2000,
+  delay: 200,
+});
+ScrollReveal().reveal(".home-content, .header", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-img, .services-container, .portfolio-box, .contact form",
+  { origin: "bottom" }
+);
+ScrollReveal().reveal(".home-contact h1, .about-img", { origin: "left" });
+ScrollReveal().reveal(".home-contact p, .about-content", { origin: "right" });
+
+/* ============ Typed JS ============ */
+const typed = new Typed(".multiple-text", {
+  strings: ["Frontend Developer", "Web Designer"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  backDelay: 1000,
+  loop: true,
 });

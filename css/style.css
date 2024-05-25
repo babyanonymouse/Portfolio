@@ -381,6 +381,24 @@ span {
   #menu-icon {
     display: block;
   }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 1rem 3%;
+    background: #191f36;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .navbar.active {
+    display: block;
+  }
   .home {
     flex-direction: column;
   }

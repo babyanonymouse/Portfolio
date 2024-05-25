@@ -388,6 +388,24 @@ span {
   #menu-icon {
     display: block;
   }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 1rem 3%;
+    background: $bg-color;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+    a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+    }
+    &.active {
+      display: block;
+    }
+  }
   .home {
     flex-direction: column;
   }
@@ -422,7 +440,7 @@ span {
   }
 }
 
-@media (max-width:617px) {
+@media (max-width: 617px) {
   .portfolio-container {
     grid-template-columns: 1fr;
   }
@@ -436,7 +454,7 @@ span {
   }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
   html {
     font-size: 50%;
   }
