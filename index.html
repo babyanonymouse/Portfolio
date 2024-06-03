@@ -195,24 +195,28 @@
     <!-- CONTACT SECTION DESIGN -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-      <form action="#">
+      <form action="https://formsubmit.co/kida8152@gmail.com" method="POST">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Full Name" name="fullname" required />
+          <input type="email" placeholder="Email Address" name="email" required/>
         </div>
 
         <div class="input-box">
           <input
             type="tel"
-            placeholder="Phone Number"
-            required
+            placeholder="Phone Number (optional)"
             minlength="10"
             maxlength="15"
           />
-          <input type="text" placeholder="Email Subject" required />
+          <input type="text" placeholder="Email Subject" required name="_subject" />
         </div>
-        <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="hidden" name="_template" value="table">
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
         <input type="submit" value="Send Message" class="btn" />
+        <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase"> <!-- include phrases to filter out spam content  -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://samuelouda.github.io/Portfolio/thanks.html">
+        <input type="hidden" name="_autoresponse" value="Hello There, this is your submission to the Samuel Lwanga Portfolio Website.">
       </form>
     </section>
 
