@@ -241,7 +241,7 @@ span {
   opacity: 0.7;
 }
 .portfolio-box img:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .portfolio-box .portfolio-layer {
   position: absolute;
@@ -371,7 +371,7 @@ span {
     padding-bottom: 7rem;
   }
   .contact {
-    min-height: auto;
+    min-height: 0;
   }
   .footer {
     padding: 2rem 3%;
