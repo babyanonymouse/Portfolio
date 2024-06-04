@@ -254,7 +254,9 @@
           <div class="error-text">Message can't be blank</div>
         </div>
 
-        <button class="btn" type="submit">Send Message</button>
+        <button class="btn" type="submit">
+          Send Message
+        </button>
       </form>
     </section>
 
@@ -293,53 +295,21 @@
 
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector("form");
-        const fields = ["name", "email", "subject", "message"].map((id) =>
-          document.getElementById(id)
-        );
 
-        form.addEventListener("submit", function (event) {
-          let valid = true;
+    <!-- Form JS -->
+    <script src="js/form.js"></script>
 
-          fields.forEach((field) => {
-            if (field.value.trim() === "") {
-              setError(field, `${field.placeholder} can't be blank`);
-              valid = false;
-            } else {
-              clearError(field);
-            }
-          });
-
-          if (!valid) {
-            event.preventDefault();
-          }
+    <!-- EMAIL JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({ 
+           publicKey: "lh61egYcGlO3Btri-",
         });
-
-        fields.forEach((field) => {
-          field.addEventListener("input", function () {
-            clearError(field);
-          });
-        });
-
-        function setError(element, message) {
-          const field = element.parentElement;
-          const errorText = field.querySelector(".error-text");
-
-          field.classList.add("error");
-          errorText.textContent = message;
-          errorText.style.display = "block";
-        }
-
-        function clearError(element) {
-          const field = element.parentElement;
-          const errorText = field.querySelector(".error-text");
-
-          field.classList.remove("error");
-          errorText.style.display = "none";
-        }
-      });
+      })();
     </script>
   </body>
 </html>
