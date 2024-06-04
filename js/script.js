@@ -7,6 +7,19 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+// Autocapitalize first character
+document.getElementById("name").addEventListener("input", function () {
+  this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+});
+
+document.getElementById("subject").addEventListener("input", function () {
+  this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+});
+
+document.querySelector("textarea").addEventListener("input", function () {
+  this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+});
+
 /*=============== Scroll Section Active Link ===============*/
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
@@ -46,6 +59,7 @@ ScrollReveal().reveal(
   ".home-img, .services-container, .portfolio-box, .contact form",
   { origin: "bottom" }
 );
+
 ScrollReveal().reveal(".home-contact h1, .about-img", { origin: "left" });
 ScrollReveal().reveal(".home-contact p, .about-content", { origin: "right" });
 
@@ -57,3 +71,6 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+
+

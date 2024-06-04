@@ -197,22 +197,64 @@
       <h2 class="heading">Contact <span>Me</span></h2>
       <form action="#" method="post">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address"  required/>
+          <div class="input-field field">
+            <input
+              type="text"
+              id="name"
+              class="item"
+              placeholder="Full Name"
+              autocomplete="off"
+            />
+            <div class="error-text">Full Name can't be blank</div>
+          </div>
+
+          <div class="input-field field">
+            <input
+              type="email"
+              id="email"
+              class="item"
+              placeholder="Email Address"
+              autocomplete="off"
+            />
+            <div class="error-text">Email can't be blank</div>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field field">
+            <input
+              type="tel"
+              id="phone"
+              class="item"
+              placeholder="Phone Number (optional)"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="input-field field">
+            <input
+              type="text"
+              id="subject"
+              class="item"
+              placeholder="Email Subject"
+              autocomplete="off"
+            />
+            <div class="error-text">Subject can't be blank</div>
+          </div>
         </div>
 
-        <div class="input-box">
-          <input
-            type="tel"
-            placeholder="Phone Number (optional)"
-            minlength="10"
-            maxlength="15"
-          />
-          <input type="text" placeholder="Email Subject" required  />
+        <div class="textarea-field field">
+          <textarea
+            id="message"
+            rows="10"
+            cols="30"
+            class="item"
+            autocomplete="off"
+            placeholder="Your Message"
+          ></textarea>
+          <div class="error-text">Message can't be blank</div>
         </div>
-        <input type="hidden" value="table">
-        <textarea  cols="30" rows="10" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+
+        <button class="btn" type="submit">Send Message</button>
       </form>
     </section>
 
@@ -220,6 +262,20 @@
     <footer class="footer">
       <div class="footer-text">
         <p>Copyright &copy; 2024 by Samuel Lwanga | All rights reserved</p>
+      </div>
+      <div class="devbox">
+        <style>
+          .development-message {
+            color: #fff;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.3rem;
+          }
+        </style>
+        <p class="development-message">
+          *some sections of this page are still in development
+        </p>
       </div>
       <div class="footer-iconTop">
         <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
@@ -232,7 +288,58 @@
     <!-- TYPED JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- SWEET ALERT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const fields = ["name", "email", "subject", "message"].map((id) =>
+          document.getElementById(id)
+        );
+
+        form.addEventListener("submit", function (event) {
+          let valid = true;
+
+          fields.forEach((field) => {
+            if (field.value.trim() === "") {
+              setError(field, `${field.placeholder} can't be blank`);
+              valid = false;
+            } else {
+              clearError(field);
+            }
+          });
+
+          if (!valid) {
+            event.preventDefault();
+          }
+        });
+
+        fields.forEach((field) => {
+          field.addEventListener("input", function () {
+            clearError(field);
+          });
+        });
+
+        function setError(element, message) {
+          const field = element.parentElement;
+          const errorText = field.querySelector(".error-text");
+
+          field.classList.add("error");
+          errorText.textContent = message;
+          errorText.style.display = "block";
+        }
+
+        function clearError(element) {
+          const field = element.parentElement;
+          const errorText = field.querySelector(".error-text");
+
+          field.classList.remove("error");
+          errorText.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>

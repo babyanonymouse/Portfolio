@@ -249,7 +249,11 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(89, 178, 244, 0.4), rgba(38, 43, 64, 0.9));
+  background: linear-gradient(
+    to top,
+    rgba(89, 178, 244, 0.4),
+    rgba(38, 43, 64, 0.9)
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,30 +287,23 @@ span {
   font-size: 2rem;
   color: #262b40;
 }
-
+/* contact form start */
 .contact h2 {
   margin-bottom: 3rem;
 }
+
 .contact form {
   width: 600px;
   text-align: center;
-  margin: 0 auto; /* Add this line to center the form */
 }
 .contact form .input-box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.contact form .input-box .input-field {
+.input-box .input-field {
   width: 48.5%;
 }
-.contact form textarea {
-  resize: none;
-}
-.contact form .btn {
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
 .field .item {
   width: 100%;
   padding: 18px;
@@ -317,15 +314,21 @@ span {
   color: #ededed;
   margin: 12px 0;
 }
-.field.error .item {
-  border-color: #ff6166;
+.field .item::placeholder {
+  color: rgba(255, 255, 255, 0.726);
 }
-.field .error-text {
-  color: #ff6166;
-  font-size: 14.5px;
-  text-align: left;
-  margin: -5px 0 10px 10px;
-  display: none;
+.contact form textarea {
+  resize: none;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #262b40;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
 .footer {
@@ -458,4 +461,4 @@ span {
   .contact form .input-box input {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

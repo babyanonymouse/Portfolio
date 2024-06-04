@@ -17,6 +17,8 @@ $bg-color: #191f36;
 $snd-bg-color: #262b40;
 $main-color: #59b2f4;
 $text-color: #fff;
+$error: #ff6166;
+$light-text: #ededed;
 
 html {
   font-size: 62.5%;
@@ -290,44 +292,56 @@ span {
     }
   }
 }
+// contact section start
 .contact {
   h2 {
     margin-bottom: 3rem;
   }
-}
-.contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
-  .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    input {
-      width: 100%;
-      padding: 1.5rem;
-      font-size: 1.6rem;
-      color: $snd-bg-color;
-      border-radius: 0.8rem;
-      margin: 0.7rem 0;
-      width: 49%;
+  form {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto; /* Add this line to center the form */
+
+    .input-box {
+      display: flex;
+      justify-content: space-between;
+      .input-field {
+        width: 48.5%;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    .btn {
+      margin-top: 1rem;
+      cursor: pointer;
     }
   }
-  textarea {
-    resize: none;
+}
+.field {
+  .item {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: $snd-bg-color;
-    border-radius: 0.8rem;
-    margin: 0.7rem 0;
+    padding: 18px;
+    background: transparent;
+    border: 3px solid $main-color;
+    outline: none;
+    border-radius: 6px;
+    color: $light-text;
+    margin: 12px 0;
   }
-  .btn {
-    margin-top: 2rem;
-    cursor: pointer;
+  &.error .item {
+    border-color: $error;
+  }
+  .error-text {
+    color: $error;
+    font-size: 14.5px;
+    text-align: left;
+    margin: -5px 0 10px 10px;
+    display: none;
   }
 }
+
+// Footer start
 .footer {
   display: flex;
   justify-content: space-between;
