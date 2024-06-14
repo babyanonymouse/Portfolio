@@ -371,6 +371,7 @@ span {
 }
 
 // BREAKPOINT
+// Media Queries
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -465,6 +466,17 @@ span {
   .about-img img {
     width: 80vw;
     margin-top: 4rem;
+  }
+  .contact {
+    form {
+      width: 100%;
+      .input-box {
+        flex-direction: column;
+        .input-field {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
