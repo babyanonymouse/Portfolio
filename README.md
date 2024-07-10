@@ -1,7 +1,6 @@
-# Portfolio
-
-My Portfolio Website
+# Personal Portfolio Website
 
 ## Changes to be done
 
-1. FormSubmit Interaction
+1. initialize the photos and the subject in the portfolio section
+2. Make the "Read More" buton effective.
