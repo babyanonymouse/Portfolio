@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 const Header = () => {
   return (
     <header className="text-white bg-bodydark">
-      <nav className="fixed top-0 left-0 w-full shadow-md z-20 lg:relative lg:shadow-none">
+      <nav className="fixed top-0 left-0 w-full p-3 shadow-md shadow-white z-20 lg:relative lg:shadow-none max-w-[110rem] mx-auto">
         <motion.div
           className="flex justify-between items-center p-4 lg:px-20"
           initial={{ y: -250 }}
@@ -13,12 +13,12 @@ const Header = () => {
           transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
         >
           {/* logo */}
-          <div className="font-bebas text-[32px]">
+          <div className="font-bebas text-4xl">
             <Link href="/">Samuel Lwanga</Link>
           </div>
           {/* links */}
           <div className="hidden lg:block font-inter cursor-pointer">
-            <ul className="flex space-x-5">
+            <ul className="flex space-x-6 text-xl">
               <li>
                 <ScrollLink to="projects" smooth={true} duration={500}>
                   Projects

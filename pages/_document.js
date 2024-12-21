@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head/>
       <title>Samuel Lwanga</title>
-      <body className="antialiased">
+      <body className="antialiased bg-bodydark text-white">
         <Main />
         <NextScript />
       </body>

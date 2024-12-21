@@ -10,7 +10,7 @@ const tailwindConfig = {
       colors: {
         accent: "var(--accent)",
         bodydark: "var(--body-dark)",
-        buttonback: "var(--button-back)", 
+        buttonback: "var(--button-back)",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
