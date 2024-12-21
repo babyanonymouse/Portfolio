@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,8 +8,14 @@ const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        accent: "var(--accent)",
+        bodydark: "var(--body-dark)",
+        buttonback: "var(--button-back)", 
+      },
+      fontFamily: {
+        manrope: ["Manrope", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

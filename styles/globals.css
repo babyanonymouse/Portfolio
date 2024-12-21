@@ -1,21 +1,19 @@
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+
+/* tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* custom css */
+/* root colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #d3e97a;
+  --body-dark: #0a0a0a;
+  --button-back: #222222;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+body,
+header {
+  @apply bg-bodydark;
 }
