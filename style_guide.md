@@ -18,7 +18,7 @@
 2. initialize photos with subject in the portfolio section
 3. Minimize projects
 4. Remove/Make "Read More" button effective.
-5. Maintain Contact form Layout but change CSS to Tailwind
+5. Maintain Contact form Layout/ or as component but change CSS to Tailwind
 
 ## Styles
 
