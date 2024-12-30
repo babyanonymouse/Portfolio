@@ -69,7 +69,7 @@ function sendMail() {
     }
 
     emailjs
-        .send("service_yct31dm", "contact_form", parms)
+        .send("service_3xjwv3m", "contact_form", parms)
         .then(() => {
             alert("Email sent successfully!");
         })
