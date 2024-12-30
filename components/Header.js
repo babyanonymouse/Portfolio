@@ -2,6 +2,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 
+// navbar json
+const navLinks = [
+  { id: 1, title: "Projects", link: "projects" },
+  { id: 2, title: "About", link: "about" },
+  { id: 3, title: "Contact", link: "contact" },
+];
+
 const Header = () => {
   return (
     <header className="text-white bg-bodydark">
@@ -13,27 +20,19 @@ const Header = () => {
           transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
         >
           {/* logo */}
-          <div className="font-bebas text-4xl">
+          <div className="font-bebas text-4xl hover:text-light duration-150">
             <Link href="/">Samuel Lwanga</Link>
           </div>
           {/* links */}
           <div className="hidden lg:block font-inter cursor-pointer">
-            <ul className="flex space-x-6 text-xl">
-              <li>
-                <ScrollLink to="projects" smooth={true} duration={500}>
-                  Projects
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink to="about" smooth={true} duration={500}>
-                  About
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink to="contact" smooth={true} duration={500}>
-                  Contact
-                </ScrollLink>
-              </li>
+            <ul className="flex space-x-6 text-xl text-light">
+              {navLinks.map((link) => (
+                <li key={link.id} className="hover:text-white duration-200">
+                  <ScrollLink to={link.link} smooth={true} duration={500}>
+                    {link.title}
+                  </ScrollLink>
+                </li>
+              ))}
             </ul>
           </div>
         </motion.div>

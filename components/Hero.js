@@ -9,7 +9,7 @@ const Hero = () => {
         <h1 className="font-bebas sm:text-5xl md:text-6xl lg:text-8xl max-w-xl">
           Hi, I am <br /> Samuel Lwanga.
         </h1>
-        <p className="font-manrope sm:text-lg md:text-xl lg:text-2xl max-w-3xl">
+        <p className="font-manrope text-light sm:text-lg md:text-xl lg:text-2xl max-w-3xl">
           A Kenyan based front-end developer passionate about building
           accessible and user friendly websites.
         </p>

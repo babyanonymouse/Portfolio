@@ -12,6 +12,7 @@
   --accent: #d3e97a;
   --body-dark: #0a0a0a;
   --button-back: #222222;
+  --text-light: #c7c7c7;
 }
 .btn {
   background-color: var(--accent);
