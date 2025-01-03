@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Hero />
       {/* <hr className="border-t-2 border-[#484848]  max-w-[110rem] mx-auto w-full mt-6" /> */}
-      <hr className="hr max-w-7xl mx-auto my-4" />
+      <hr className="hr max-w-7xl mx-auto my-9" />
       <section id="projects" className="my-16">
         <Projects />
       </section>
