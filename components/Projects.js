@@ -18,7 +18,7 @@ const Projects = () => {
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
-              width={550}
+              width={500}
               src="/images/kuza.png"
               alt="Kuza Beyond"
               className="rounded-2xl h-80 my-24 mx-10"
@@ -53,7 +53,7 @@ const Projects = () => {
             </div>
             {/* links */}
             <div className="flex space-x-4 text-accent uppercase font-medium">
-              <a
+              <a target="_blank"
                 href="https://kuza-beyond.com"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -77,11 +77,11 @@ const Projects = () => {
           </div>
         </div>
         {/* project 2 */}
-        <div className="flex space-x-32 mt-9 justify-around">
+        <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
-              width={550}
+              width={500}
               src="/images/vortex.png"
               alt="Vortex Restaurant"
               className="rounded-2xl h-80 my-24 mx-9"
@@ -115,7 +115,7 @@ const Projects = () => {
             </div>
             {/* links */}
             <div className="flex space-x-4 text-accent uppercase font-medium">
-              <a
+              <a target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -136,6 +136,7 @@ const Projects = () => {
                 </svg>
               </a>
               <a
+              target="_blank"
                 href="https://github.com/babyanonymouse/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -145,11 +146,11 @@ const Projects = () => {
           </div>
         </div>
         {/* project 3 */}
-        <div className="flex space-x-32 mt-9 justify-around">
+        <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
-              width={550}
+              width={500}
               height={700}
               src="/images/parkpave.png"
               alt="ParkPave"
@@ -189,18 +190,19 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
               <div className="flex justify-between">
                 <p className="text-light">Role</p>
-                <p className="text-light">Developer</p>
+                <p className="text-light">Designer & Developer</p>
               </div>
               <hr className="border-t-2 border-[#484848] w-full" />
               <div className="flex justify-between">
                 <p className="text-light">Tech Stack</p>
-                <p className="text-light">Bootstrap, Javascript, CSS</p>
+                <p className="text-light">HTML, Javascript, SCSS, PHP</p>
               </div>
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
             <div className="flex space-x-4 text-accent uppercase font-medium">
               <a
+              target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -221,6 +223,7 @@ const Projects = () => {
                 </svg>
               </a>
               <a
+                target="_blank"
                 href="https://github.com/babyanonymouse/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -231,7 +234,8 @@ const Projects = () => {
         </div>
         <div className="flex justify-center">
           <a
-            href="https://github.com/babyanoymouse/"
+            href="https://github.com/babyanonymouse/"
+            target="_blank"
             className="p-2 text-black rounded-lg bg-accent hover:bg-buttonback hover:text-light duration-300"
           >
             More Projects

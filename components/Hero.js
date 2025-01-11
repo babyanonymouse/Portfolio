@@ -16,7 +16,8 @@ const Hero = () => {
         {/* social icons */}
         <div className="flex space-x-6 mt-6 items-center">
           <a
-            href="https://#"
+            href="https://linktr.ee/Samuel_Lwanga"
+            target="_blank"
             className="btn items-center uppercase font-bold font-manrope flex justify-around"
           >
             Contact Me
@@ -36,12 +37,14 @@ const Hero = () => {
             </svg>
           </a>
           <a
+            target="_blank"
             href="https://linkedin.com/#"
             className="bg-buttonback rounded-full text-3xl text-accent p-3"
           >
             <FaLinkedinIn />
           </a>
           <a
+            target="_blank"
             href="https://github.com/babyanonymouse"
             className="bg-buttonback rounded-full text-3xl text-accent p-3"
           >
