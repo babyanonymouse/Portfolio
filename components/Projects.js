@@ -14,14 +14,14 @@ const Projects = () => {
       </div>
       <div className="space-y-24">
         {/* project 1 */}
-        <div className="flex space-x-32 mt-9 justify-center">
+        <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
               width={550}
               src="/images/kuza.png"
               alt="Kuza Beyond"
-              className="rounded-2xl  h-80 my-24 mx-9"
+              className="rounded-2xl h-80 my-24 mx-10"
             />
           </div>
           {/* description */}
@@ -77,7 +77,7 @@ const Projects = () => {
           </div>
         </div>
         {/* project 2 */}
-        <div className="flex space-x-32 mt-9 justify-center">
+        <div className="flex space-x-32 mt-9 justify-around">
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
@@ -145,11 +145,12 @@ const Projects = () => {
           </div>
         </div>
         {/* project 3 */}
-        <div className="flex space-x-32 mt-9 justify-center">
+        <div className="flex space-x-32 mt-9 justify-around">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
             <img
               width={550}
+              height={700}
               src="/images/parkpave.png"
               alt="ParkPave"
               className="rounded-2xl h-80 my-24 mx-9"

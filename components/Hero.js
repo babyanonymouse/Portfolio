@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="flex text-white items-center justify-between p-8 mx-auto max-w-[100rem]">
+    <section className="flex text-white items-center justify-around p-8 mx-auto max-w-[100rem]">
       {/* content */}
       <div className="flex flex-col space-y-4">
         <h1 className="font-bebas sm:text-5xl md:text-6xl lg:text-8xl max-w-xl">
@@ -41,7 +41,10 @@ const Hero = () => {
           >
             <FaLinkedinIn />
           </a>
-          <a className="bg-buttonback rounded-full text-3xl text-accent p-3">
+          <a
+            href="https://github.com/babyanonymouse"
+            className="bg-buttonback rounded-full text-3xl text-accent p-3"
+          >
             <FaGithub />
           </a>
         </div>

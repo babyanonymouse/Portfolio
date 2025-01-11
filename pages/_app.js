@@ -1,9 +1,11 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header";
+import Cursor from "@/components/Cursor";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Cursor />
       <Header />
       <Component {...pageProps} />
       {/* custom cursor */}
