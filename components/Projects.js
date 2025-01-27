@@ -136,7 +136,7 @@ const Projects = () => {
                 </svg>
               </a>
               <a
-              target="_blank"
+                target="_blank"
                 href="https://github.com/babyanonymouse/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -161,26 +161,28 @@ const Projects = () => {
           <div className="flex flex-col space-y-7 max-w-xl justify-center font-manrope">
             <h1 className="text-3xl font-medium">
               ParkPave
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6 inline ml-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-                />
-              </svg>
+              {/* tooltip */}
+              <div className="tooltip">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6 inline ml-2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                  />
+                </svg>
+                <span className="tooltiptext">Private Repo</span>
+              </div>
+
             </h1>
             <p className="text-light text-lg">
-              Built using Bootstrap 5 and colab with campus friends, this is a
-              fun project website for a Restaurant (might be true some other
-              time). It's a simple website that showcases the menu and location
-              of the restaurant.
+              Built using Bootstrap 5 during the last semester. This is a parking webiste that finds available parking spaces and notifies the driver.
             </p>
             {/* info table */}
             <div className="flex flex-col space-y-2">
@@ -202,7 +204,7 @@ const Projects = () => {
             {/* links */}
             <div className="flex space-x-4 text-accent uppercase font-medium">
               <a
-              target="_blank"
+                target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >

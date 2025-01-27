@@ -1,7 +1,9 @@
 
 const about = () => {
   return (
-    <div className="text-white">This is about page </div>
+    <div className="flex flex-col items-center justify-center">
+Hello
+    </div>
   )
 }
 

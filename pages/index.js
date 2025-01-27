@@ -12,9 +12,11 @@ export default function Home() {
       <section id="projects" className="my-16">
         <Projects />
       </section>
-      <section id="about">
+      <hr className="hr  max-w-7xl mx-auto my-9" />
+      <section id="about" className="my-16">
         <About />
       </section>
+      <hr className="hr max-w-7xl mx-auto my-9" />
       <section id="contact">
         <Contact />
       </section>
