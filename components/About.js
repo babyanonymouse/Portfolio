@@ -1,8 +1,7 @@
-import Link from "next/link";
 
 const About = () => {
   return (
-    <section className="flex max-w-[100rem] mx-auto">
+    <section className="flex max-w-[100rem] mx-auto p-8">
       {/* about me text */}
       <div className="w-2/5">
         <h1 className="uppercase font-bebas sm:text-5xl md:text-6xl lg:text-8xl">
@@ -16,14 +15,14 @@ const About = () => {
           Has Backend Engineering Background.
         </h2>
         <p className="font-manrope text-light text-xl">
-          I am a self-taught developer passionate about building accessible and user-friendly websites. 
-          With a background in backend engineering, I am currently enhancing my frontend skills. 
-          I mentor at She Code Africa, helping aspiring female developers grow their skills and confidence. 
-          I enjoy learning new technologies and contributing to open-source projects. 
+          I am a self-taught developer passionate about building accessible and user-friendly websites.
+          With a background in backend engineering, I am currently enhancing my frontend skills.
+          I mentor at She Code Africa, helping aspiring female developers grow their skills and confidence.
+          I enjoy learning new technologies and contributing to open-source projects.
           My goal is to create impactful and inclusive digital experiences.
         </p>
         <div className="flex justify-center">
-          <Link href="/about" className="p-3 text-accent font-medium uppercase underline underline-offset-4 ">Read More</Link>
+          <a href="/about" className="p-3 text-accent font-bold uppercase underline underline-offset-4 ">More about me</a>
         </div>
       </div>
     </section>

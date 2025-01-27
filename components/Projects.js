@@ -52,8 +52,9 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-medium">
-              <a target="_blank"
+            <div className="flex space-x-4 text-accent uppercase font-bold">
+              <a
+                target="_blank"
                 href="https://kuza-beyond.com"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -114,8 +115,9 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-medium">
-              <a target="_blank"
+            <div className="flex space-x-4 text-accent uppercase font-bold">
+              <a
+                target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
@@ -179,10 +181,11 @@ const Projects = () => {
                 </svg>
                 <span className="tooltiptext">Private Repo</span>
               </div>
-
             </h1>
             <p className="text-light text-lg">
-              Built using Bootstrap 5 during the last semester. This is a parking webiste that finds available parking spaces and notifies the driver.
+              Built using Bootstrap 5 during the last semester. This is a
+              parking webiste that finds available parking spaces and notifies
+              the driver.
             </p>
             {/* info table */}
             <div className="flex flex-col space-y-2">
@@ -202,7 +205,7 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-medium">
+            <div className="flex space-x-4 text-accent uppercase font-bold">
               <a
                 target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
@@ -238,7 +241,7 @@ const Projects = () => {
           <a
             href="https://github.com/babyanonymouse/"
             target="_blank"
-            className="p-2 text-black rounded-lg bg-accent hover:bg-buttonback hover:text-light duration-300"
+            className="p-2 text-black font-medium rounded-lg bg-accent hover:bg-buttonback hover:text-light duration-300"
           >
             More Projects
           </a>
