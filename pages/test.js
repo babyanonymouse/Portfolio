@@ -1,7 +1,7 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 
-const Contact = () => {
+const Test = () => {
   return (
     <section
       id="contact"
@@ -12,8 +12,8 @@ const Contact = () => {
         <h1 className="sm:text-4xl md:text-5xl lg:text-7xl uppercase font-bebas text-white">
           Let's Connect
         </h1>
-        <p className="text-xl text-light mt-4">
-          Say hello at {""}
+        <p className="text-sm text-gray-400 mt-4">
+          Say hello at{" "}
           <a
             href="mailto:babyanonymouse2@gmail.com"
             className="text-accent hover:underline"
@@ -21,7 +21,7 @@ const Contact = () => {
             babyanonymouse2@gmail.com
           </a>
         </p>
-        <p className="text-xl text-gray-400 mt-2">
+        <p className="text-sm text-gray-400 mt-2">
           For more info, here's my{" "}
           <a
             href="#"
@@ -84,6 +84,7 @@ const Contact = () => {
           <input
             type="text"
             id="name"
+            placeholder="Enter your name"
             className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
           />
         </div>
@@ -97,6 +98,7 @@ const Contact = () => {
           <input
             type="email"
             id="email"
+            placeholder="Enter your email"
             className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
           />
         </div>
@@ -110,6 +112,7 @@ const Contact = () => {
           <input
             type="text"
             id="subject"
+            placeholder="Enter the subject"
             className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
           />
         </div>
@@ -122,6 +125,7 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
+            placeholder="Enter your message"
             rows="5"
             className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
           ></textarea>
@@ -137,4 +141,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Test;

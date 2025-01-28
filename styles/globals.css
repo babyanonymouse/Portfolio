@@ -13,6 +13,7 @@
   --body-dark: #0a0a0a;
   --button-back: #222222;
   --text-light: #c7c7c7;
+  --card-hover: #111827;
 }
 
 .btn {
@@ -101,4 +102,8 @@ a {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+textarea {
+  resize: none;
 }

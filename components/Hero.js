@@ -39,14 +39,14 @@ const Hero = () => {
           <a
             target="_blank"
             href="https://linkedin.com/#"
-            className="bg-buttonback rounded-full text-3xl text-accent p-3"
+            className="bg-cardhover rounded-full text-3xl text-accent p-3"
           >
             <FaLinkedinIn />
           </a>
           <a
             target="_blank"
             href="https://github.com/babyanonymouse"
-            className="bg-buttonback rounded-full text-3xl text-accent p-3"
+            className="bg-cardhover rounded-full text-3xl text-accent p-3"
           >
             <FaGithub />
           </a>

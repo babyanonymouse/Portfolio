@@ -11,7 +11,7 @@ const About = () => {
       {/* description */}
       <div className="w-3/5 space-y-5">
         <h2 className="text-4xl font-manrope font-medium ">
-          I am a Frontend Developer based in Nairobi. <br />
+          Frontend Developer based in Nairobi. <br />
           Has Backend Engineering Background.
         </h2>
         <p className="font-manrope text-light text-xl">

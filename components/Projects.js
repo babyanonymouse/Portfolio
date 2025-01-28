@@ -16,7 +16,7 @@ const Projects = () => {
         {/* project 1 */}
         <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/kuza.png"
@@ -80,7 +80,7 @@ const Projects = () => {
         {/* project 2 */}
         <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/vortex.png"
@@ -150,7 +150,7 @@ const Projects = () => {
         {/* project 3 */}
         <div className="flex space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-buttonback transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               height={700}
@@ -241,7 +241,7 @@ const Projects = () => {
           <a
             href="https://github.com/babyanonymouse/"
             target="_blank"
-            className="p-2 text-black font-medium rounded-lg bg-accent hover:bg-buttonback hover:text-light duration-300"
+            className="p-2 text-black font-medium rounded-lg bg-accent hover:bg-cardhover hover:text-light duration-300"
           >
             More Projects
           </a>
