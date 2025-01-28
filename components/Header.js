@@ -1,26 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
-// navbar json
+// Navbar JSON
 const navLinks = [
   { id: 1, title: "Projects", link: "projects" },
   { id: 2, title: "About", link: "about" },
   { id: 3, title: "Contact", link: "contact" },
 ];
 
+const menuVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
   return (
-    <header className="text-white bg-bodydark">
-      <nav className="fixed top-0 left-0 w-full p-3 shadow-md z-20 lg:relative lg:shadow-none max-w-[110rem] mx-auto">
+    <header
+      className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 ${
+        isScrolled ? "bg-black shadow-md" : "bg-transparent"
+      }`}
+    >
+      <nav className="p-3 max-w-[110rem] mx-auto">
         <motion.div
           className="flex justify-between items-center p-4 lg:px-20"
           initial={{ y: -250 }}
@@ -35,7 +65,7 @@ const Header = () => {
           {/* Hamburger Menu for Mobile */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={toggleMenu}
               className="text-3xl text-light focus:outline-none"
             >
               {isMenuOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
@@ -56,12 +86,15 @@ const Header = () => {
           </div>
         </motion.div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation with Animations */}
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden bg-bodydark absolute top-full left-0 w-full shadow-md"
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden bg-black absolute top-full left-0 w-full shadow-md"
           >
             <ul className="flex flex-col items-center space-y-4 p-4 text-xl text-light font-inter">
               {navLinks.map((link) => (
