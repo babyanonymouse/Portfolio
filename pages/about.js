@@ -145,7 +145,7 @@ const about = () => {
             <li className="mb-10 pl-6">
               <div className="absolute w-3 h-3 bg-accent rounded-full -left-[0.390rem] border border-white dark:border-gray-900 dark:bg-accent"></div>
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                February 2022
+                July 2019
               </time>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Freelance Developer

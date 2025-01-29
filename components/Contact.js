@@ -1,5 +1,6 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
+import Resume from "../docs/resume.pdf";
 
 const Contact = () => {
   return (
@@ -24,9 +25,9 @@ const Contact = () => {
         <p className="text-lg text-gray-400 mt-2">
           For more info, here's my{" "}
           <a
-            href="#"
-            className="text-accent hover:underline"
+            href={Resume}
             target="_blank"
+            className="text-accent hover:underline"
             rel="noopener noreferrer"
           >
             resume
