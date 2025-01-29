@@ -11,13 +11,15 @@ const tailwindConfig = {
         accent: "var(--accent)",
         light: "var(--text-light)",
         bodydark: "var(--body-dark)",
-        // buttonback: "var(--button-back)",
         cardhover: "var(--card-hover)",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+      },
+      borderColor: {
+        light: "var(--border-light)",
       },
     },
   },

@@ -14,19 +14,26 @@
   --button-back: #222222;
   --text-light: #c7c7c7;
   --card-hover: #111827;
+  --border-light: #484848;
+}
+
+*,
+body,
+a {
+  cursor: none !important;
 }
 
 .btn {
   background-color: var(--accent);
   color: var(--body-dark);
-  width: 150px;
+  /* width: 150px; */
   height: 40px;
   border-radius: 3.5rem;
 }
 
 @media (min-width: 768px) {
   .btn {
-    width: 187px;
+    /* width: 187px; */
     height: 54px;
   }
 
@@ -48,12 +55,6 @@
   cursor: none !important;
 }
 
-*,
-body,
-a {
-  cursor: none !important;
-}
-
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -68,6 +69,13 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #d3e97a;
+}
+
+/* hide cursor in small screens */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
 }
 
 .cursor-text {
@@ -109,6 +117,7 @@ a {
   opacity: 1;
 }
 
+/* disable resize */
 textarea {
   resize: none;
 }

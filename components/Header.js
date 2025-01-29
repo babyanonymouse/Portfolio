@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { useRouter } from "next/router";
 
 // Navbar JSON
 const navLinks = [
@@ -11,10 +12,16 @@ const navLinks = [
   { id: 3, title: "Contact", link: "contact" },
 ];
 
+// const menuVariants = {
+//   hidden: { opacity: 0, y: -20 },
+//   visible: { opacity: 1, y: 0 },
+//   exit: { opacity: 0, y: -20 },
+// };
+
 const menuVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
+  hidden: { opacity: 0, y: -20, scale: 0.8 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: -20, scale: 0.8 },
 };
 
 const Header = () => {
@@ -44,10 +51,16 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  // test if the page is the home page
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 ${
-        isScrolled ? "bg-black bg-opacity-50 backdrop-blur-lg shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-black bg-opacity-50 backdrop-blur-lg shadow-md"
+          : "bg-transparent"
       }`}
     >
       <nav className="py-2 max-w-[110rem] mx-auto px-2">
@@ -93,8 +106,12 @@ const Header = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-black absolute top-full left-0 w-full shadow-md"
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className={`${
+              isScrolled
+                ? "bg-black bg-opacity-90 backdrop-blur-xl shadow-md"
+                : "bg-bodydark"
+            } lg:hidden absolute top-full left-0 w-full`}
           >
             <ul className="flex flex-col items-center space-y-6 p-4 text-2xl text-light font-inter">
               {navLinks.map((link) => (
@@ -103,14 +120,21 @@ const Header = () => {
                   className="hover:text-white duration-200"
                   onClick={closeMenu} // Close menu when clicked
                 >
-                  <ScrollLink
-                    to={link.link}
-                    smooth={true}
-                    duration={500}
-                    onClick={closeMenu} // Close menu on link click
-                  >
-                    {link.title}
-                  </ScrollLink>
+                  {isHomePage ? (
+                    // react-scroll on Homepage
+                    <ScrollLink
+                      to={link.link}
+                      smooth={true}
+                      duration={500}
+                      onClick={closeMenu} // Close menu on link click
+                    >
+                      {link.title}
+                    </ScrollLink>
+                  ) : (
+                    <Link scroll={true} href={`/#${link.link}`}>
+                      {link.title}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

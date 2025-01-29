@@ -34,7 +34,7 @@ const Contact = () => {
         </p>
         {/* Social Links */}
         <div className="md:mt-12 mt-5">
-          <ul className="flex space-x-6 justify-center">
+          <ul className="flex space-x-6 justify-center md:justify-start">
             <li>
               <a
                 href="#"

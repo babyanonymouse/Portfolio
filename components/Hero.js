@@ -18,7 +18,7 @@ const Hero = () => {
           <a
             href="https://linktr.ee/Samuel_Lwanga"
             target="_blank"
-            className="btn items-center uppercase font-bold font-manrope flex justify-around text-sm md:text-base"
+            className="btn  w-44 items-center uppercase font-bold font-manrope flex justify-around text-sm md:text-base"
           >
             Contact Me
             <svg
@@ -37,13 +37,13 @@ const Hero = () => {
             </svg>
           </a>
           <a
-            href="#"
+            href="https://ke.linkedin.com/in/lwangasamuel"
             className="bg-cardhover rounded-full  text-xl md:text-3xl text-accent p-3"
           >
             <FaLinkedinIn />
           </a>
           <a
-            href="#"
+            href="https://github.com/babyanonymouse"
             className="bg-cardhover rounded-full text-xl md:text-3xl text-accent p-3"
           >
             <FaGithub />
