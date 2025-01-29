@@ -50,7 +50,7 @@ const Header = () => {
         isScrolled ? "bg-black bg-opacity-50 backdrop-blur-lg shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="py-5 max-w-[110rem] mx-auto px-5">
+      <nav className="py-2 max-w-[110rem] mx-auto px-2">
         <motion.div
           className="flex justify-between items-center p-4 lg:px-20"
           initial={{ y: -250 }}
@@ -58,7 +58,7 @@ const Header = () => {
           transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
         >
           {/* Logo */}
-          <div className="font-bebas text-5xl md:text-4xl hover:text-light duration-150">
+          <div className="font-bebas text-3xl md:text-4xl hover:text-light duration-150">
             <Link href="/">Samuel Lwanga</Link>
           </div>
 
@@ -66,7 +66,7 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-5xl text-light focus:outline-none"
+              className="text-3xl text-light focus:outline-none"
             >
               {isMenuOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
             </button>
@@ -96,7 +96,7 @@ const Header = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="lg:hidden bg-black absolute top-full left-0 w-full shadow-md"
           >
-            <ul className="flex flex-col items-center space-y-10 p-4 text-4xl text-light font-inter">
+            <ul className="flex flex-col items-center space-y-6 p-4 text-2xl text-light font-inter">
               {navLinks.map((link) => (
                 <li
                   key={link.id}

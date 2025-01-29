@@ -9,10 +9,10 @@ const Contact = () => {
     >
       {/* Left Side: Contact Details */}
       <div className="flex-1">
-        <h1 className="sm:text-4xl md:text-5xl lg:text-7xl uppercase font-bebas text-white">
+        <h1 className="text-5xl md:text-7xl uppercase font-bebas text-white">
           Let's Connect
         </h1>
-        <p className="text-xl text-light mt-4">
+        <p className="text-lg text-light mt-4">
           Say hello at {""}
           <a
             href="mailto:babyanonymouse2@gmail.com"
@@ -21,7 +21,7 @@ const Contact = () => {
             babyanonymouse2@gmail.com
           </a>
         </p>
-        <p className="text-xl text-gray-400 mt-2">
+        <p className="text-lg text-gray-400 mt-2">
           For more info, here's my{" "}
           <a
             href="#"
@@ -33,8 +33,8 @@ const Contact = () => {
           </a>
         </p>
         {/* Social Links */}
-        <div className="mt-12">
-          <ul className="flex space-x-6">
+        <div className="md:mt-12 mt-5">
+          <ul className="flex space-x-6 justify-center">
             <li>
               <a
                 href="#"
@@ -72,7 +72,7 @@ const Contact = () => {
       {/* Right Side: Contact Form */}
       <form
         action="#"
-        className="flex-1 bg-gray-900 p-8 rounded-lg shadow-lg space-y-6"
+        className="-mt-3 md:mt-0 flex-1 bg-gray-900 p-8 rounded-lg shadow-lg space-y-6"
       >
         <div>
           <label
@@ -84,7 +84,7 @@ const Contact = () => {
           <input
             type="text"
             id="name"
-            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
+            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
           />
         </div>
         <div>
@@ -97,7 +97,7 @@ const Contact = () => {
           <input
             type="email"
             id="email"
-            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
+            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
           />
         </div>
         <div>
@@ -110,7 +110,7 @@ const Contact = () => {
           <input
             type="text"
             id="subject"
-            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
+            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
           />
         </div>
         <div>
@@ -123,7 +123,7 @@ const Contact = () => {
           <textarea
             id="message"
             rows="5"
-            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-3"
+            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
           ></textarea>
         </div>
         <button

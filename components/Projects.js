@@ -1,39 +1,41 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col max-w-[100rem] mx-auto">
-      <div className="my-9">
-        <h1 className="sm:text-4xl md:text-5xl lg:text-7xl font-bebas">
-          Featured Projects
-        </h1>
+    <section className="flex flex-col max-w-full md:max-w-[100rem] mx-auto">
+      <div className="mt-9 text-center md:text-start">
+        <h1 className="text-5xl md:text-7xl font-bebas">Featured Projects</h1>
         <p className="font-manrope text-light sm:text-lg md:text-xl lg:text-2xl">
           Here are some of the selected projects that showcase my passion for
           front-end development.
         </p>
       </div>
-      <div className="space-y-24">
+      {/* project wrapper */}
+      <div className="space-y-24 my-2">
         {/* project 1 */}
-        <div className="flex space-x-32 mt-9 justify-evenly">
+        <div className="px-5 md:px-0 flex flex-col md:flex-row  md:space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/kuza.png"
               alt="Kuza Beyond"
-              className="rounded-2xl h-80 my-24 mx-10"
+              className="rounded-2xl md:h-80 md:my-24 md:mx-10"
             />
           </div>
           {/* description */}
-          <div className="flex flex-col space-y-7 max-w-xl justify-center font-manrope">
-            <h1 className="text-3xl font-medium">Kuza Beyond</h1>
-            <p className="text-light text-lg">
+          <div className="flex flex-col space-y-6 md:space-y-7 max-w-xl justify-center mt-4 md:mt-0">
+            <h1 className="text-3xl font-medium text-center md:text-start">
+              Kuza Beyond
+            </h1>
+            <p className="text-center md:text-start text-light text-sm md:text-lg">
               Designed and built. it's a website for a fintech Company whose
               purpose is to give business owners the ability to access loans and
               other financial services.
             </p>
             {/* info table */}
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 text-sm md:text-lg">
               <h1 className="font-medium font-manrope uppercase text-lg">
                 Project Info
               </h1>
@@ -52,11 +54,11 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-bold">
+            <div className="flex space-x-4 text-accent uppercase font-bold justify-center md:justify-start">
               <a
                 target="_blank"
                 href="https://kuza-beyond.com"
-                className="underline underline-offset-4 decoration-2 hover:text-light"
+                className="underline underline-offset-4 decoration-2 hover:text-light "
               >
                 go to site
                 <svg
@@ -78,27 +80,29 @@ const Projects = () => {
           </div>
         </div>
         {/* project 2 */}
-        <div className="flex space-x-32 mt-9 justify-evenly">
+        <div className="px-5 md:px-0 flex flex-col md:flex-row md:space-x-32 mt-9 justify-evenly">
           {/* image */}
           <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/vortex.png"
               alt="Vortex Restaurant"
-              className="rounded-2xl h-80 my-24 mx-9"
+              className="rounded-2xl md:h-80 md:my-24 md:mx-10"
             />
           </div>
           {/* description */}
-          <div className="flex flex-col space-y-7 max-w-xl justify-center font-manrope">
-            <h1 className="text-3xl font-medium">Vortex Restaurant</h1>
-            <p className="text-light text-lg">
+          <div className="flex flex-col space-y-6 md:space-y-7 max-w-xl justify-center mt-4 md:mt-0">
+            <h1 className="text-3xl font-medium text-center md:text-start">
+              Vortex Restaurant
+            </h1>
+            <p className="text-center md:text-start text-light text-sm md:text-lg">
               Built using Bootstrap 5 and colab with campus friends, this is a
               fun project website for a Restaurant (might be true some other
               time). It's a simple website that showcases the menu and location
               of the restaurant.
             </p>
             {/* info table */}
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 text-sm md:text-lg">
               <h1 className="font-medium font-manrope uppercase text-lg">
                 Project Info
               </h1>
@@ -115,7 +119,7 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
             {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-bold">
+            <div className="flex space-x-4 text-accent uppercase font-bold justify-center md:justify-start">
               <a
                 target="_blank"
                 href="https://babyanonymouse.github.io/Vortex-Restaurant/"
@@ -143,105 +147,17 @@ const Projects = () => {
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
                 See on Github
+                <FaGithub  className="inline ml-2"/>
               </a>
             </div>
           </div>
         </div>
-        {/* project 3 */}
-        <div className="flex space-x-32 mt-9 justify-evenly">
-          {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
-            <img
-              width={500}
-              height={700}
-              src="/images/parkpave.png"
-              alt="ParkPave"
-              className="rounded-2xl h-80 my-24 mx-9"
-            />
-          </div>
-          {/* description */}
-          <div className="flex flex-col space-y-7 max-w-xl justify-center font-manrope">
-            <h1 className="text-3xl font-medium">
-              ParkPave
-              {/* tooltip */}
-              <div className="tooltip">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6 inline ml-2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-                  />
-                </svg>
-                <span className="tooltiptext">Private Repo</span>
-              </div>
-            </h1>
-            <p className="text-light text-lg">
-              Built using Bootstrap 5 during the last semester. This is a
-              parking webiste that finds available parking spaces and notifies
-              the driver.
-            </p>
-            {/* info table */}
-            <div className="flex flex-col space-y-2">
-              <h1 className="font-medium font-manrope uppercase text-lg">
-                Project Info
-              </h1>
-              <hr className="border-t-2 border-[#484848] w-full" />
-              <div className="flex justify-between">
-                <p className="text-light">Role</p>
-                <p className="text-light">Designer & Developer</p>
-              </div>
-              <hr className="border-t-2 border-[#484848] w-full" />
-              <div className="flex justify-between">
-                <p className="text-light">Tech Stack</p>
-                <p className="text-light">HTML, Javascript, SCSS, PHP</p>
-              </div>
-              <hr className="border-t-2 border-[#484848] w-full" />
-            </div>
-            {/* links */}
-            <div className="flex space-x-4 text-accent uppercase font-bold">
-              <a
-                target="_blank"
-                href="https://babyanonymouse.github.io/Vortex-Restaurant/"
-                className="underline underline-offset-4 decoration-2 hover:text-light"
-              >
-                Live Demo
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-5 inline"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                  />
-                </svg>
-              </a>
-              <a
-                target="_blank"
-                href="https://github.com/babyanonymouse/Vortex-Restaurant/"
-                className="underline underline-offset-4 decoration-2 hover:text-light"
-              >
-                See on Github
-              </a>
-            </div>
-          </div>
-        </div>
+
         <div className="flex justify-center">
           <a
             href="https://github.com/babyanonymouse/"
             target="_blank"
-            className="p-2 text-black font-medium rounded-lg bg-accent hover:bg-cardhover hover:text-light duration-300"
+            className="p-2 text-black font-bold rounded-lg bg-accent hover:bg-cardhover hover:text-light duration-300"
           >
             More Projects
           </a>

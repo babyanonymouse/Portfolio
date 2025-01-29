@@ -19,11 +19,18 @@
 .btn {
   background-color: var(--accent);
   color: var(--body-dark);
-  width: 187px;
-  height: 54px;
+  width: 150px;
+  height: 40px;
   border-radius: 3.5rem;
 }
 
+@media (min-width: 768px) {
+  .btn {
+    width: 187px;
+    height: 54px;
+  }
+
+}
 
 /* custom cursor */
 .flare {
@@ -41,10 +48,8 @@
   cursor: none !important;
 }
 
-body {
-  cursor: none !important;
-}
-
+*,
+body,
 a {
   cursor: none !important;
 }
