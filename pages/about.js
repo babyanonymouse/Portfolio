@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 //  SVG Import
 import Vscode from "../public/vscode.svg";
@@ -204,9 +205,20 @@ const about = () => {
           </ol>
         </div>
       </div>
-      <Contact />
+      {/* <Contact /> */}
+      <footer className="bg-gray-900 text-gray-300 py-12 text-center">
+        <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+        <p className="text-lg mb-6">Have a project in mind? Let's discuss.</p>
+        <Link href="/#contact">
+          <button className="px-6 py-3 text-lg font-semibold bg-accent text-black rounded-md hover:bg-green-400 transition">
+            Get in Touch
+          </button>
+        </Link>
+        <p className="mt-6 text-sm text-gray-500">
+          © {new Date().getFullYear()} Samuel Lwanga. All rights reserved.
+        </p>
+      </footer>
     </section>
   );
 };
-
 export default about;

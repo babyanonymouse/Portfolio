@@ -1,22 +1,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
-import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { Link as ScrollLink, scroller } from "react-scroll"; // Import scroller
 import { useRouter } from "next/router";
+import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
-// Navbar JSON
+// Navigation Links
 const navLinks = [
   { id: 1, title: "Projects", link: "projects" },
   { id: 2, title: "About", link: "about" },
   { id: 3, title: "Contact", link: "contact" },
 ];
-
-// const menuVariants = {
-//   hidden: { opacity: 0, y: -20 },
-//   visible: { opacity: 1, y: 0 },
-//   exit: { opacity: 0, y: -20 },
-// };
 
 const menuVariants = {
   hidden: { opacity: 0, y: -20, scale: 0.8 },
@@ -27,33 +21,39 @@ const menuVariants = {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleNavClick = (link) => {
+    if (router.pathname === "/") {
+      // If already on homepage, just scroll
+      scroller.scrollTo(link, {
+        smooth: true,
+        duration: 500,
+        offset: -80, // Adjust this to account for the navbar height
+      });
+    } else {
+      // If on a different page, navigate home first
+      router.push(`/#${link}`).then(() => {
+        setTimeout(() => {
+          scroller.scrollTo(link, {
+            smooth: true,
+            duration: 500,
+            offset: -80, // Adjust for navbar
+          });
+        }, 100); // Small delay to ensure navigation is complete
+      });
+    }
+    setIsMenuOpen(false); // Close menu after clicking
   };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // test if the page is the home page
-  const router = useRouter();
-  const isHomePage = router.pathname === "/";
 
   return (
     <header
@@ -78,7 +78,7 @@ const Header = () => {
           {/* Hamburger Menu for Mobile */}
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-3xl text-light focus:outline-none"
             >
               {isMenuOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
@@ -88,18 +88,31 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:block font-inter cursor-pointer">
             <ul className="flex space-x-6 text-xl text-light">
-              {navLinks.map((link) => (
-                <li key={link.id} className="hover:text-white duration-200">
-                  <ScrollLink to={link.link} smooth={true} duration={500}>
-                    {link.title}
-                  </ScrollLink>
+              {navLinks.map(({ id, title, link }) => (
+                <li
+                  key={id}
+                  className="hover:text-white duration-200"
+                  onClick={() => handleNavClick(link)}
+                >
+                  {router.pathname === "/" ? (
+                    <ScrollLink
+                      to={link}
+                      smooth={true}
+                      duration={500}
+                      offset={-80}
+                    >
+                      {title}
+                    </ScrollLink>
+                  ) : (
+                    <Link href={`/#${link}`}>{title}</Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
         </motion.div>
 
-        {/* Mobile Navigation with Animations */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div
             variants={menuVariants}
@@ -114,26 +127,23 @@ const Header = () => {
             } lg:hidden absolute top-full left-0 w-full`}
           >
             <ul className="flex flex-col items-center space-y-6 p-4 text-2xl text-light font-inter">
-              {navLinks.map((link) => (
+              {navLinks.map(({ id, title, link }) => (
                 <li
-                  key={link.id}
+                  key={id}
                   className="hover:text-white duration-200"
-                  onClick={closeMenu} // Close menu when clicked
+                  onClick={() => handleNavClick(link)}
                 >
-                  {isHomePage ? (
-                    // react-scroll on Homepage
+                  {router.pathname === "/" ? (
                     <ScrollLink
-                      to={link.link}
+                      to={link}
                       smooth={true}
                       duration={500}
-                      onClick={closeMenu} // Close menu on link click
+                      offset={-80}
                     >
-                      {link.title}
+                      {title}
                     </ScrollLink>
                   ) : (
-                    <Link scroll={true} href={`/#${link.link}`}>
-                      {link.title}
-                    </Link>
+                    <Link href={`/#${link}`}>{title}</Link>
                   )}
                 </li>
               ))}

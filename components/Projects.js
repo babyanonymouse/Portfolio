@@ -16,7 +16,7 @@ const Projects = () => {
         {/* project 1 */}
         <div className="px-5 md:px-0 flex flex-col md:flex-row  md:space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg transform hover:-translate-y-3 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/kuza.png"
@@ -82,7 +82,7 @@ const Projects = () => {
         {/* project 2 */}
         <div className="px-5 md:px-0 flex flex-col md:flex-row md:space-x-32 mt-9 justify-evenly">
           {/* image */}
-          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-6 hover:bg-cardhover transition-transform duration-300">
+          <div className="bg-[#1a1a1a] rounded-lg  transform hover:-translate-y-3 hover:bg-cardhover transition-transform duration-300">
             <img
               width={500}
               src="/images/vortex.png"
@@ -147,7 +147,7 @@ const Projects = () => {
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
                 See on Github
-                <FaGithub  className="inline ml-2"/>
+                <FaGithub className="inline ml-2" />
               </a>
             </div>
           </div>

@@ -6,7 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* custom css */
 /* root colors */
 :root {
   --accent: #d3e97a;
