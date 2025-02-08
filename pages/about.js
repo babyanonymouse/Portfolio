@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 //  SVG Import
 import Vscode from "../public/vscode.svg";
@@ -14,15 +15,31 @@ import Contact from "@/components/Contact";
 
 const about = () => {
   return (
-    <section className="max-w-[100rem] mx-auto py-8 px-5 md:mt-44 space-y-24">
+    <motion.section
+      className="max-w-[100rem] mx-auto py-8 px-5 mt-14 md:mt-28 space-y-24"
+      initial={{ opacity: 0.01 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* about me */}
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-2/5 w-full text-center md:text-start">
+        <motion.div
+          className="md:w-2/5 w-full text-center md:text-start"
+          initial={{ opacity: 0.01, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="font-medium uppercase font-bebas text-6xl md:text-8xl">
             About Me
           </h1>
-        </div>
-        <div className="md:w-3/5 space-y-5">
+        </motion.div>
+
+        <motion.div
+          className="md:w-3/5 space-y-5"
+          initial={{ opacity: 0.01, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className=" text-xl md:text-4xl font-manrope font-light text-center md:text-start mt-4 md:mt-0">
             Frontend Developer based in Nairobi. <br />
             Has Backend Engineering Background.
@@ -36,12 +53,16 @@ const about = () => {
             contributing to open-source projects. My goal is to create impactful
             and inclusive digital experiences.
           </p>
+
           {/* social icons */}
           <div className="flex space-x-4 md:space-x-6 mt-6 items-center justify-center md:justify-start">
-            <a
+            <motion.a
               href="https://linktr.ee/Samuel_Lwanga"
               target="_blank"
               className="btn w-60 items-center uppercase font-bold font-manrope flex justify-around text-sm md:text-base"
+              initial={{ opacity: 0.01, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
               Download Resume
               <svg
@@ -59,34 +80,50 @@ const about = () => {
                 />
                 on the radar amp
               </svg>
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://ke.linkedin.com/in/lwangasamuel"
               className="bg-cardhover rounded-full  text-xl md:text-3xl text-accent p-3"
+              initial={{ opacity: 0.01, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <FaLinkedinIn />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://github.com/babyanonymouse"
               className="bg-cardhover rounded-full text-xl md:text-3xl text-accent p-3"
+              initial={{ opacity: 0.01, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <FaGithub />
-            </a>
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
       </div>
+
       {/* Image */}
-      <div className="">
+      <motion.div
+        initial={{ opacity: 0.01, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <Image
           src={"/images/aboutimage.png"}
           width={900}
           height={900}
           className="w-full h-full"
         />
-      </div>
+      </motion.div>
 
       {/* capabilities */}
-      <div className="flex flex-col md:flex-row my-5">
+      <motion.div
+        className="flex flex-col md:flex-row my-5"
+        initial={{ opacity: 0.01, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="md:w-2/5 w-full text-center md:text-start">
           <h1 className="font-medium uppercase font-bebas text-6xl md:text-8xl ">
             My Capabilities
@@ -102,33 +139,73 @@ const about = () => {
           </p>
           {/* languages */}
           <ul className="flex flex-wrap gap-2 font-bold text-sm md:text-base text-center uppercase">
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#e34c26] hover:text-white transition duration-300">
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#e34c26] hover:text-white transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               HTML
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#1572B6] hover:text-white transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#1572B6] hover:text-white transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               CSS
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#F7DF1E] hover:text-black transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#F7DF1E] hover:text-black transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               JavaScript
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#61DAFB] hover:text-black transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#61DAFB] hover:text-black transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               React
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#646CFF] hover:text-white transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#646CFF] hover:text-white transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
               Vite
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#000000] hover:text-white transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#000000] hover:text-white transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               Next.js
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#06B6D4] hover:text-black transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#06B6D4] hover:text-black transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
               Tailwind CSS
-            </li>
-            <li className="p-3 px-7 rounded-full border border-light hover:bg-[#CC6699] hover:text-white transition duration-300">
+            </motion.li>
+            <motion.li
+              className="p-3 px-7 rounded-full border border-light hover:bg-[#CC6699] hover:text-white transition duration-300"
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1 }}
+            >
               Sass
-            </li>
+            </motion.li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       <hr className="border-t-2 border-gray-600 opacity-75 max-w-7xl mx-auto my-9" />
 
@@ -140,11 +217,36 @@ const about = () => {
           </h1>
         </div>
 
-        <div className="md:w-3/5">
+        <motion.div
+          className="md:w-3/5"
+          initial={{ opacity: 0.01 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
             {/* Timeline Item 1 */}
-            <li className="mb-10 pl-6">
-              <div className="absolute w-3 h-3 bg-accent rounded-full -left-[0.390rem] border border-white dark:border-gray-900 dark:bg-accent"></div>
+            <motion.li
+              className="mb-10 pl-6"
+              initial={{ opacity: 0.01, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              {/* current time */}
+              <div className="absolute flex items-center justify-center w-6 h-6 bg-[#06B6D4] rounded-full -left-3 ring-4 ring-[#fff] dark:ring-[#1e293b]">
+                <svg
+                  aria-hidden="true"
+                  className="w-3.5 h-3.5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 5a1 1 0 011 1v5h5a1 1 0 110 2h-6a1 1 0 01-1-1V6a1 1 0 011-1z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 July 2019
               </time>
@@ -161,7 +263,7 @@ const about = () => {
                 user-centric design, making freelancing a rewarding and
                 growth-driven journey.
               </p>
-            </li>
+            </motion.li>
 
             {/* Timeline Item 2 */}
             <li className="mb-10 pl-6">
@@ -203,7 +305,7 @@ const about = () => {
               </p>
             </li>
           </ol>
-        </div>
+        </motion.div>
       </div>
       {/* <Contact /> */}
       <footer className="bg-gray-900 text-gray-300 py-12 text-center">
@@ -218,7 +320,7 @@ const about = () => {
           © {new Date().getFullYear()} Samuel Lwanga. All rights reserved.
         </p>
       </footer>
-    </section>
+    </motion.section>
   );
 };
 export default about;
