@@ -28,13 +28,21 @@ const Contact = () => {
         </h1>
         <p className="text-lg text-light mt-4">
           Say hello at{" "}
-          <a href="mailto:babyanonymouse2@gmail.com" className="text-accent hover:underline">
+          <a
+            href="mailto:babyanonymouse2@gmail.com"
+            className="text-accent hover:underline"
+          >
             babyanonymouse2@gmail.com
           </a>
         </p>
         <p className="text-lg text-gray-400 mt-2">
           For more info, here's my{" "}
-          <a href={Resume} target="_blank" className="text-accent hover:underline" rel="noopener noreferrer">
+          <a
+            href={Resume}
+            target="_blank"
+            className="text-accent hover:underline"
+            rel="noopener noreferrer"
+          >
             resume
           </a>
         </p>
@@ -48,7 +56,14 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <ul className="flex space-x-6 justify-center md:justify-start">
-            {[FiLinkedin, FiGithub, FaXTwitter].map((Icon, index) => (
+            {[
+              {
+                Icon: FiLinkedin,
+                link: "https://ke.linkedin.com/in/lwangasamuel",
+              },
+              { Icon: FiGithub, link: "https://github.com/babyanonymouse" },
+              { Icon: FaXTwitter, link: "https://x.com/babyLilboss" },
+            ].map(({ Icon, link }, index) => (
               <motion.li
                 key={index}
                 initial={{ opacity: 0.01, scale: 0.95 }}
@@ -57,7 +72,7 @@ const Contact = () => {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
               >
                 <a
-                  href="#"
+                  href={link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-full flex items-center justify-center bg-gray-800 text-accent hover:bg-gray-700 transition"
@@ -92,7 +107,10 @@ const Contact = () => {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
           >
-            <label htmlFor={id} className="block text-sm font-medium text-gray-400">
+            <label
+              htmlFor={id}
+              className="block text-sm font-medium text-gray-400"
+            >
               {label}
             </label>
             <input
@@ -110,7 +128,10 @@ const Contact = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <label htmlFor="message" className="block text-sm font-medium text-gray-400">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-gray-400"
+          >
             Message
           </label>
           <textarea
