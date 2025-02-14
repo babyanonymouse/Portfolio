@@ -46,6 +46,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!validateForm()) {
+      // form is invalid, do not proceed
       return;
     }
 
@@ -55,6 +56,17 @@ const Contact = () => {
       message: form.current.message.value,
       year: new Date().getFullYear(),
     };
+
+    emailjs.send("service_3xjwv3m", "portfolio_form", templateParams).then(
+      () => {
+        alert("email Sent Successfully");
+        form.current.reset();
+        setErrors({ name: false, email: false, message: false });
+      },
+      (error) => {
+        alert("Failed Sending Email:", error.text);
+      }
+    );
   };
 
   return (
@@ -140,7 +152,8 @@ const Contact = () => {
 
       {/* Right Side: Contact Form */}
       <motion.form
-        action="#"
+        ref={form}
+        onSubmit={sendMail}
         className="-mt-3 md:mt-0 flex-1 bg-gray-900 p-8 rounded-lg shadow-lg space-y-6"
         initial={{ opacity: 0.01, x: 10 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -159,6 +172,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+            className={`field ${errors[id] ? "error" : ""}}`}
           >
             <label
               htmlFor={id}
@@ -169,9 +183,14 @@ const Contact = () => {
             <input
               type={type}
               id={id}
-              required
-              className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
+              name={id}
+              onChange={handleInputChange}
+              className={`item mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3
+                ${errors[id] ? "ring-2 ring-red-500 focus:ring-red-500" : ""}
+              `}
             />
+            {errors[id] &&
+            <div className="error-text"> {label} cannot be blank</div>}
           </motion.div>
         ))}
 
@@ -181,6 +200,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          className={`field ${errors.message ? "error" : ""}`}
         >
           <label
             htmlFor="message"
@@ -191,8 +211,16 @@ const Contact = () => {
           <textarea
             id="message"
             rows="5"
-            className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
+            name="message"
+            onChange={handleInputChange}
+            className={`item mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3 
+              ${
+                errors.message ? "ring-2 ring-red-500 focus:ring-red-500" : ""
+              }`}
           ></textarea>
+          {errors.message && (
+            <div className="error-text">Message cannot be blank</div>
+          )}
         </motion.div>
 
         {/* Submit Button */}

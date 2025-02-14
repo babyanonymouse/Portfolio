@@ -120,3 +120,14 @@ a {
 textarea {
   resize: none;
 }
+
+/* form validation */
+@layer utilities {
+  .field.error .item {
+    @apply border-red-500;
+  }
+
+  .field .error-text {
+    @apply text-red-500 font-semibold text-sm text-left mt-1 ml-2;
+  }
+}
