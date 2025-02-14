@@ -57,16 +57,20 @@ const Contact = () => {
       year: new Date().getFullYear(),
     };
 
-    emailjs.send("service_3xjwv3m", "portfolio_form", templateParams).then(
-      () => {
-        alert("email Sent Successfully");
-        form.current.reset();
-        setErrors({ name: false, email: false, message: false });
-      },
-      (error) => {
-        alert("Failed Sending Email:", error.text);
-      }
-    );
+    emailjs
+      .send("service_3xjwv3m", "portfolio_form", templateParams, {
+        publicKey: "Fh2V9upPXTSjFRJg5",
+      })
+      .then(
+        () => {
+          alert("email Sent Successfully");
+          form.current.reset();
+          setErrors({ name: false, email: false, message: false });
+        },
+        (error) => {
+          alert("Failed Sending Email:", error.text);
+        }
+      );
   };
 
   return (
@@ -189,8 +193,9 @@ const Contact = () => {
                 ${errors[id] ? "ring-2 ring-red-500 focus:ring-red-500" : ""}
               `}
             />
-            {errors[id] &&
-            <div className="error-text"> {label} cannot be blank</div>}
+            {errors[id] && (
+              <div className="error-text"> {label} cannot be blank</div>
+            )}
           </motion.div>
         ))}
 
