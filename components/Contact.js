@@ -3,7 +3,60 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 import Resume from "../docs/resume.pdf";
 
+// emailjs
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+
 const Contact = () => {
+  const form = useRef();
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: value.trim() === "",
+    }));
+  };
+
+  const validateForm = () => {
+    const name = form.current.name.value.trim();
+    const email = form.current.email.value.trim();
+    const message = form.current.message.value.trim();
+
+    const newErrors = {
+      name: name === "",
+      email: email === "",
+      message: message === "",
+    };
+
+    setErrors(newErrors);
+
+    // check if there are no errors
+    return !newErrors.name && !newErrors.email && !newErrors.message;
+  };
+
+  // send mail
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    const templateParams = {
+      from_name: form.current.name.value,
+      from_email: form.current.email.value,
+      message: form.current.message.value,
+      year: new Date().getFullYear(),
+    };
+  };
+
   return (
     <motion.section
       id="contact"
@@ -116,6 +169,7 @@ const Contact = () => {
             <input
               type={type}
               id={id}
+              required
               className="mt-1 block w-full rounded-md bg-gray-800 text-white border-gray-700 focus:ring-2 focus:ring-accent focus:border-accent p-2 md:p-3"
             />
           </motion.div>
