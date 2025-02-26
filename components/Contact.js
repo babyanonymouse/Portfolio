@@ -76,7 +76,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="flex flex-col lg:flex-row max-w-[100rem] mx-auto px-6 py-16 gap-16"
+      className="flex flex-col lg:flex-row w-full md:max-w-[100rem] mx-auto px-6 py-16 gap-16"
       initial={{ opacity: 0.01, y: 10 }} // Prevent shift
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
@@ -85,7 +85,7 @@ const Contact = () => {
     >
       {/* Left Side: Contact Details */}
       <motion.div
-        className="flex-1"
+        className="flex-1 md:flex md: flex-col md:items-center"
         initial={{ opacity: 0.01, x: -10 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}

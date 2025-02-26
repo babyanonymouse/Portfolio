@@ -4,10 +4,10 @@ import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col max-w-full md:max-w-[100rem] mx-auto">
+    <section className="flex flex-col w-full md:max-w-[100rem] mx-auto">
       {/* Title & Description */}
       <motion.div
-        className="mt-9 text-center md:text-start"
+        className="mt-9 text-center xl:text-start px-3 xl:ml-28"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
@@ -15,7 +15,7 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-5xl md:text-7xl font-bebas">Featured Projects</h1>
-        <p className="font-manrope text-light sm:text-lg md:text-xl lg:text-2xl">
+        <p className="font-manrope text-light text-sm md:text-lg lg:text-xl">
           Here are some of the selected projects that showcase my passion for
           front-end development.
         </p>
@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="space-y-24 my-2">
         {/* Project 1 - Kuza Beyond */}
         <motion.div
-          className="px-5 md:px-0 flex flex-col md:flex-row md:space-x-32 mt-9 justify-evenly"
+          className="px-5 md:px-0 lg:px-4 flex flex-col lg:flex-row md:space-x-32 mt-9 justify-evenly"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
@@ -34,7 +34,7 @@ const Projects = () => {
         >
           {/* Image */}
           <motion.div
-            className="relative w-full md:w-[500px] rounded-lg overflow-hidden group transition-transform duration-300"
+            className="relative w-full md:w-[500px] md:mx-auto lg:mx-0 rounded-lg overflow-hidden group transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
@@ -60,9 +60,9 @@ const Projects = () => {
             exit={{ opacity: 0, y: 50 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col space-y-6 md:space-y-7 max-w-xl justify-center mt-4 md:mt-0"
+            className="flex flex-col space-y-6 md:space-y-7 max-w-xl lg:max-w-md xl:max-w-lg justify-center mt-4 md:mt-8 lg:mt-0"
           >
-            <h1 className="text-3xl font-medium text-center md:text-start">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-medium text-center md:text-start">
               Kuza Beyond
             </h1>
             <p className="text-center md:text-start text-light text-sm md:text-lg">
@@ -105,29 +105,28 @@ const Projects = () => {
 
         {/* Project 2 - Vortex Restaurant */}
         <motion.div
-          className="px-5 md:px-0 flex flex-col md:flex-row md:space-x-32 mt-9 justify-evenly"
+          className="px-5 md:px-0 lg:px-4 flex flex-col lg:flex-row md:space-x-32 mt-9 justify-evenly"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
           {/* Image */}
           <motion.div
-            className="relative w-full md:w-[500px] rounded-lg overflow-hidden group transition-transform duration-300"
+            className="relative w-full md:w-[500px] md:mx-auto lg:mx-0 rounded-lg overflow-hidden group transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
-            exit={{ scale: 0.9 }}
             viewport={{ once: false, amount: 0.2 }}
+            exit={{ scale: 0.9 }}
             transition={{ duration: 0.6 }}
           >
             <motion.img
-              width={500}
               src="/images/vortex.png"
-              alt="Vortex Restaurant"
+              alt="Kuza Beyond"
               className="w-full h-auto object-cover rounded-lg md:h-80"
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.95 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -136,19 +135,19 @@ const Projects = () => {
 
           {/* Description */}
           <motion.div
-            className="flex flex-col space-y-6 md:space-y-7 max-w-xl justify-center mt-4 md:mt-0"
-            initial={{ opcaity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col space-y-6 md:space-y-7 max-w-xl lg:max-w-md xl:max-w-lg justify-center mt-4 md:mt-8 lg:mt-0"
           >
-            <h1 className="text-3xl font-medium text-center md:text-start">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-medium text-center md:text-start">
               Vortex Restaurant
             </h1>
             <p className="text-center md:text-start text-light text-sm md:text-lg">
-              Built using Bootstrap 5 in collaboration with campus friends, this
-              fun project showcases a restaurant's menu and location.
+              Designed and built. It's a website for a fintech company that
+              provides business owners access to loans and financial services.
             </p>
 
             {/* Info Table */}
@@ -159,12 +158,14 @@ const Projects = () => {
               <hr className="border-t-2 border-[#484848] w-full" />
               <div className="flex justify-between">
                 <p className="text-light">Role</p>
-                <p className="text-light">Developer</p>
+                <p className="text-light">Designer & Developer</p>
               </div>
               <hr className="border-t-2 border-[#484848] w-full" />
               <div className="flex justify-between">
                 <p className="text-light">Tech Stack</p>
-                <p className="text-light">Bootstrap, JavaScript, CSS</p>
+                <p className="text-light">
+                  Vite (React), Tailwind, Framer Motion
+                </p>
               </div>
               <hr className="border-t-2 border-[#484848] w-full" />
             </div>
@@ -173,17 +174,10 @@ const Projects = () => {
             <div className="flex space-x-4 text-accent uppercase font-bold justify-center md:justify-start">
               <a
                 target="_blank"
-                href="https://babyanonymouse.github.io/Vortex-Restaurant/"
+                href="https://kuza-beyond.com"
                 className="underline underline-offset-4 decoration-2 hover:text-light"
               >
-                Live Demo
-              </a>
-              <a
-                target="_blank"
-                href="https://github.com/babyanonymouse/Vortex-Restaurant/"
-                className="underline underline-offset-4 decoration-2 hover:text-light flex items-center"
-              >
-                See on GitHub <FaGithub className="ml-2" />
+                Go to Site
               </a>
             </div>
           </motion.div>
