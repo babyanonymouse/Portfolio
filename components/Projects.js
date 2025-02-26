@@ -42,7 +42,6 @@ const Projects = () => {
             exit={{ scale: 0.9 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
               <motion.img
                 src="/images/kuza.png"
                 alt="Kuza Beyond"
@@ -52,7 +51,6 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               />
-            </div>
           </motion.div>
 
           {/* Description */}
@@ -124,7 +122,6 @@ const Projects = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
               <motion.img
                 width={500}
                 src="/images/vortex.png"
@@ -135,7 +132,6 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               />
-            </div>
           </motion.div>
 
           {/* Description */}
