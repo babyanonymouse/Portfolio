@@ -42,15 +42,15 @@ const Projects = () => {
             exit={{ scale: 0.9 }}
             transition={{ duration: 0.6 }}
           >
-              <motion.img
-                src="/images/kuza.png"
-                alt="Kuza Beyond"
-                className="w-full h-auto object-cover rounded-lg md:h-80"
-                initial={{ scale: 0.95 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              />
+            <motion.img
+              src="/images/kuza.png"
+              alt="Kuza Beyond"
+              className="w-full h-auto object-cover rounded-lg md:h-80"
+              initial={{ scale: 0.95 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            />
           </motion.div>
 
           {/* Description */}
@@ -122,16 +122,16 @@ const Projects = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-              <motion.img
-                width={500}
-                src="/images/vortex.png"
-                alt="Vortex Restaurant"
-                className="w-full h-auto object-cover rounded-lg md:h-80"
-                initial={{ scale: 0.9 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              />
+            <motion.img
+              width={500}
+              src="/images/vortex.png"
+              alt="Vortex Restaurant"
+              className="w-full h-auto object-cover rounded-lg md:h-80"
+              initial={{ scale: 0.9 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            />
           </motion.div>
 
           {/* Description */}
@@ -200,7 +200,7 @@ const Projects = () => {
           <a
             href="https://github.com/babyanonymouse/"
             target="_blank"
-            className="p-2 text-black font-bold rounded-lg bg-accent hover:bg-cardhover hover:text-light duration-300"
+            className="px-4 py-3 text-black font-bold rounded-lg bg-accent hover:bg-cardhover hover:text-light duration-300"
           >
             More Projects
           </a>
