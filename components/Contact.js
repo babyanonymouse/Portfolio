@@ -20,7 +20,7 @@ const Contact = () => {
 
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: value.trim() === "",
+      [name]: value.trim() === "", 
     }));
   };
 
