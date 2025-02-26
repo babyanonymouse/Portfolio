@@ -34,7 +34,7 @@ const Projects = () => {
         >
           {/* Image */}
           <motion.div
-            className="bg-[#1a1a1a] rounded-lg hover:-translate-y-3 hover:bg-cardhover transition-transform duration-300"
+            className="relative w-full md:w-[500px] rounded-lg overflow-hidden group transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
@@ -42,16 +42,17 @@ const Projects = () => {
             exit={{ scale: 0.9 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.img
-              width={500}
-              src="/images/kuza.png"
-              alt="Kuza Beyond"
-              className="rounded-2xl md:h-80 md:my-24 md:mx-10"
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            />
+            <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
+              <motion.img
+                src="/images/kuza.png"
+                alt="Kuza Beyond"
+                className="w-full h-auto object-cover rounded-lg md:h-80"
+                initial={{ scale: 0.95 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              />
+            </div>
           </motion.div>
 
           {/* Description */}
@@ -115,7 +116,7 @@ const Projects = () => {
         >
           {/* Image */}
           <motion.div
-            className="bg-[#1a1a1a] rounded-lg hover:-translate-y-3 hover:bg-cardhover transition-transform duration-300"
+            className="relative w-full md:w-[500px] rounded-lg overflow-hidden group transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
@@ -123,16 +124,18 @@ const Projects = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.img
-              width={500}
-              src="/images/vortex.png"
-              alt="Vortex Restaurant"
-              className="rounded-2xl md:h-80 md:my-24 md:mx-10"
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            />
+            <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
+              <motion.img
+                width={500}
+                src="/images/vortex.png"
+                alt="Vortex Restaurant"
+                className="w-full h-auto object-cover rounded-lg md:h-80"
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              />
+            </div>
           </motion.div>
 
           {/* Description */}
