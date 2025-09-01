@@ -83,7 +83,7 @@ const about = () => {
               </svg>
             </motion.a>
             <motion.a
-              href="https://ke.linkedin.com/in/lwangasamuel"
+              href="https://ke.linkedin.com/in/oudasamuel"
               className="bg-cardhover rounded-full  text-xl md:text-3xl text-accent p-3"
               initial={{ opacity: 0.01, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

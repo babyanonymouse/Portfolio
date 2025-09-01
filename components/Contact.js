@@ -128,7 +128,7 @@ const Contact = () => {
             {[
               {
                 Icon: FiLinkedin,
-                link: "https://ke.linkedin.com/in/lwangasamuel",
+                link: "https://ke.linkedin.com/in/oudasamuel",
               },
               { Icon: FiGithub, link: "https://github.com/babyanonymouse" },
               { Icon: FaXTwitter, link: "https://x.com/babyLilboss" },

@@ -63,7 +63,7 @@ const Hero = () => {
           </motion.a>
 
           <motion.a
-            href="https://ke.linkedin.com/in/lwangasamuel"
+            href="https://ke.linkedin.com/in/oudasamuel"
             className="bg-cardhover rounded-full text-xl md:text-3xl text-accent p-3"
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.3 }}
