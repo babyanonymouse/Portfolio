@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Resume from "../docs/Samuel_Lwanga_CV.pdf";
 
 //  SVG Import
 import Vscode from "../public/vscode.svg";
@@ -57,7 +58,7 @@ const about = () => {
           {/* social icons */}
           <div className="flex space-x-4 md:space-x-6 mt-6 items-center justify-center md:justify-start">
             <motion.a
-              href="https://linktr.ee/Samuel_Lwanga"
+              href={Resume}
               target="_blank"
               className="btn w-60 items-center uppercase font-bold font-manrope flex justify-around text-sm md:text-base"
               initial={{ opacity: 0.01, y: 10 }}
