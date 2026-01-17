@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
-import Resume from "../docs/resume.pdf";
+import Resume from "../docs/Samuel_Lwanga_CV.pdf";
 
 // emailjs
 import emailjs from "@emailjs/browser";
