@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Resume from "../docs/Samuel_Lwanga_CV.pdf";
+const Resume = "/Samuel_Lwanga_CV.pdf";
 
 //  SVG Import
 import Vscode from "../public/vscode.svg";

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
-import Resume from "../docs/Samuel_Lwanga_CV.pdf";
+const Resume = "/Samuel_Lwanga_CV.pdf";
 
 // emailjs
 import emailjs from "@emailjs/browser";
@@ -20,7 +20,7 @@ const Contact = () => {
 
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: value.trim() === "", 
+      [name]: value.trim() === "",
     }));
   };
 
@@ -69,7 +69,7 @@ const Contact = () => {
         },
         (error) => {
           alert("Failed Sending Email:", error.text);
-        }
+        },
       );
   };
 
